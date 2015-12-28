@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Validation</title>
+<script type="text/javascript" src="jquery-1.8.3.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var emailEx = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+	
+	$('#btnSubmit').click(function(){
+		var email = $('#txtEmail').val().trim();
+		var name = $('#txtName').val().trim();
+		var address = $('#txtAdd').val().trim();
+		
+		
+		if(name == "" || address == "" || email == "")
+		{
+			$('#Error').html("all field required");
+			return false;
+		}
+		if(!emailEx.test(email))
+		{
+			$('#Error').html("Invalid Email");
+			return false;
+		}
+		$('#Error').html("Data Inserted")
+	});
+	$('#txtEmail').keyup(function(){
+		var emailch = $('#txtEmail').val().trim();
+		if(!emailEx.test(emailch))
+		{
+			$('#Error').html("Invalid email");
+			return false;
+		}
+		else
+		{
+			$('#Error').html("");
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<table>
+	<form action="javascript:void(0)">
+		<tr>
+			<td><b>Name :</b>
+			</td>
+			<td><input type="text" id="txtName"/>
+			</td>
+		</tr>
+		<tr>
+			<td><b>Address :</b>
+			</td>
+			<td><input type="text" id="txtAdd"/>
+			</td>
+		</tr>
+		<tr>
+			<td><b>Email :</b>
+			</td>
+			<td><input type="text" id="txtEmail"/>
+			</td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Submit" id="btnSubmit" />
+			</td>
+			<td><div id="Error"></div>
+			</td>
+		</tr>
+		</form>
+	</table>
+</body>
+</html>
