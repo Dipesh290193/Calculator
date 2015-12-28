@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Calculator
+</title>
+<script type="text/javascript" src="calculatorexample.js"></script>
+
+</head>
+<body>
+<div>
+	<table border="1" cellpadding="10">
+		<tr>
+			<td>
+				<input type="button" id="btnc" value="C" onclick="clear_txt()"/>
+			</td>
+			<td colspan="3">
+            
+				<input type="text" id="txt" readonly="readonly" />
+			</td>
+            
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="btn7" value="7" onclick="btnnum(this.value)"/>
+			</td>
+			<td>
+				<input type="button" id="btn8" value="8" onclick="btnnum(this.value)"/>
+			</td>
+			<td>
+				<input type="button" id="btn9" value="9" onclick="btnnum(this.value)"/>	
+			</td>
+			<td>
+				<input type="button" id="btn+" value="+" onclick="btnnum(this.value)"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="btn4" value="4" onclick="btnnum(this.value)"/>
+			</td>
+			<td>
+				<input type="button" id="btn5" value="5" onclick="btnnum(this.value)"/>
+			</td>
+			<td>
+				<input type="button" id="btn6" value="6" onclick="btnnum(this.value)"/>	
+			</td>
+			<td>
+				<input type="button" id="btn-" value="-" onclick="btnnum(this.value)"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="btn1" value="1" onclick="btnnum(this.value)"/>
+			</td>
+			<td>
+				<input type="button" id="btn2" value="2" onclick="btnnum(this.value)"/>
+			</td>
+			<td>
+				<input type="button" id="btn3" value="3" onclick="btnnum(this.value)"/>	
+			</td>
+			<td>
+				<input type="button" id="btn/" value="/" onclick="btnnum(this.value)"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="btn0" value="0" onclick="btnnum(this.value)"/>
+			</td>
+			<td>
+				<input type="button" id="btn." value="." onclick="btnnum(this.value)" />
+			</td>
+			<td>
+				<input type="button" id="btn=" value="=" onclick="equal()"/>	
+			</td>
+			<td>
+				<input type="button" id="btn*" value="*" onclick="btnnum(this.value)"/>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>
